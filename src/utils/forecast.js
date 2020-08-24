@@ -8,7 +8,7 @@ const forecast = (latitude, longitude, callback) => {
     } else if(body.error) {
       callback('Error, try again', undefined)
     } else {
-      callback(undefined ,'It is ' + body.current.weather_descriptions[0] + ' and it is ' + body.current.temperature + ' degrees out. There is a ' + body.current.precip + '% chance of rain.')
+      callback(undefined ,'It is ' + body.current.weather_descriptions[0] + ' and it is ' + body.current.temperature + ' degrees out. It feels like '  + body.current.feelslike +  ' degrees out. There is a ' + body.current.precip + '% chance of rain.'  )
 
     }
     
